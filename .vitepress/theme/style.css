@@ -1,0 +1,153 @@
+html {
+  font-family: Arial, Helvetica;
+}
+
+body {
+  width: 210mm;
+  /* height: 297mm; */
+  margin: 0 auto;
+  /* 让内容水平居中 */
+  padding: 19.7mm;
+  /* 页边距 */
+  box-sizing: border-box;
+  border: 1px solid black;
+  /* 添加边线 */
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.title {
+  margin: 1em 0;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: left;
+  word-break: break-all;
+  padding: 0.25em 0;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+a {
+  color: #1a81ff;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile .name {
+  margin: 0 0 0.5em;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.4em;
+  text-align: left;
+  word-break: break-all;
+}
+
+.profile div {
+  margin-right: 0.5em;
+  display: inline-block;
+  word-break: break-all;
+}
+
+.avatar {
+  float: right;
+  width: 6em;
+  height: 7em;
+}
+
+.educated .school {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  white-space: nowrap;
+  margin: 0.5em 0;
+}
+
+.educated .name {
+  margin-right: 0.5em;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.educated .info {
+  margin-right: 0.5em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.educated .experence {
+  margin: 0.5em 0 0;
+}
+
+@page {
+  size: A4;
+  margin: 1cm;
+}
+
+@media print {
+
+  html,
+  body {
+    visibility: hidden;
+    /* 隐藏所有内容 */
+  }
+
+  .resume {
+    visibility: visible;
+    /* 显示打印内容 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 12.7mm;
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Optional: Customize font size and other styles for better print layout */
+  body {
+    font-size: 14.75pt;
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+  }
+
+  p,
+  ul,
+  ol {
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: #1a81ff;
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: color .3s;
+  }
+
+  .notprint {
+    display: none;
+  }
+
+}
