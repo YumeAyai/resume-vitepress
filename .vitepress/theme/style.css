@@ -63,12 +63,23 @@ a {
   height: 7em;
 }
 
+.avatar img {
+  width: auto;
+  height: 100%;
+}
+
+
 .educated .school {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  white-space: nowrap;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* flex-direction: row; */
+  /* white-space: nowrap; */
   margin: 0.5em 0;
+}
+
+.educated .school div {
+  display: inline-block;
+  word-break: break-all;
 }
 
 .educated .name {
@@ -82,6 +93,11 @@ a {
   color: rgba(0, 0, 0, 0.5);
 }
 
+.educated .time {
+  color: rgba(0, 0, 0, 0.5);
+  float: right;
+}
+
 .educated .experence {
   margin: 0.5em 0 0;
 }
@@ -89,6 +105,8 @@ a {
 @page {
   size: A4;
   margin: 1cm;
+  margin-top: 19.7mm;
+  margin-bottom: 19.7mm;
 }
 
 @media print {
@@ -108,7 +126,7 @@ a {
     width: 210mm;
     height: 297mm;
     margin: 0;
-    padding: 12.7mm;
+    padding: 0 12.7mm;
   }
 
   .content {
@@ -144,6 +162,10 @@ a {
     outline: none;
     cursor: pointer;
     transition: color .3s;
+  }
+
+  ol {
+    page-break-inside: auto;
   }
 
   .notprint {
